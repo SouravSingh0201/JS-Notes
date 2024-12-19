@@ -1,0 +1,44 @@
+---> 16-12-2024
+
+*****JS Math*****
+
+1. Many programming languages have problem with floats (i.e floating number types). So there is a way to avoid this problem
+	EX: 0.1 + 0.2 = 0.30000004 //but it should return exactly 0.3.
+	So to avoid this, Do this
+	1 + 2 = 3 => 3/10 => 0.3
+2. Rounding a Number
+	Ex: 1. Math.round(0.8) => 1  // returns nearest possible integer
+	    2. ((2095+799)*0.1)/100 => 2.894 // but we want only two decimal places
+	       Math.round((2095+799)*0.1) => 289
+	       Math.round((2095+799)*0.1)/100 => 2.89
+
+	Rounding Down: Math.floor(2.7) => 2
+	Rounding ceil: Math.ceil(2.2) => 3
+
+----> 17-12-2024
+
+*****JS Strings******
+1. a) Concatenation: Combine Strings together
+   b) typeof 9 => number , typeof "bc" => string
+   c)type coercion: automatic type conversion
+			ex: "trun"+ 10 => trun10
+2. '$' + 20.95 + 7.99 = '$20.957.99'  //Problem
+    Strings also follow the order of operations just like numbers.
+    '$' + (20.95+7.99) => $28.939999999998  //Inaccurate
+    '$' + (2095+799)/100 => $28.94 // Exact value. Problem solved
+ 	The order of strings are at last after performing all (),mul,div etc.
+3. How to get [items(2):            $28.94]??
+   Sol: "items(" + (1+1)+ "): $"+ (2095+799)/100 
+	alert("items(" + (1+1)+ "): $"+ (2095+799)/100) // Pop-up comes
+4. Possible ways to create a String
+	a: '...'	//single quote
+	b: "..."	//double quote
+	c: `...`	//back tick (or) template Strings
+5. A character can be a 
+	a: letter (a,b,c)
+	b: number (1,2,3)
+	c: symbol (!,@,#)
+	d: escape character \' --> Usage Ex: 'I\'m Learning JS' => i'm learning JS
+	e: new line Character \n 
+6. InterPolation: Insert value directly into a String
+	
